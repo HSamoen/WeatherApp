@@ -1,19 +1,26 @@
 body {
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
     padding: 0 16px;
-
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
+/* content lines 9-16*/
 .main-content {
     flex-grow: 1;
 }
 
+.main-content p {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+/* form on index page */
+form {
+    max-width: 650px;
+}
+
+/* footer partials */
 footer {
     color: #888888;
     border-top: 1px solid #eeeeee;
@@ -21,37 +28,23 @@ footer {
     padding: 16px 0;
 }
 
+/* header partials:lines 32-39 */
 header {
     margin-top: 16px;
-    margin-bottom: 48px;
-}
-
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+    margin-bottom: 80px;
 }
 
 header a {
-    color: #888888;
     margin-right: 16px;
-    text-decoration: none;
-
 }
 
-.portrait {
-    width: 250px;
+/* images: lines 42-59*/
+.indexPortrait {
+    margin-left:15px;
+    width: 200px;
 } 
 
-input {
-    border: 1px solid #cccccc;
-    padding: 8px;
-}
-
-button{
-    cursor: pointer;
-    border: 1px #888888;
-    background: #888888;
-    color: white;
-    padding: 8px;
-
-}
+.aboutportrait {
+    margin-left:15px;
+    width: 335px;
+} 

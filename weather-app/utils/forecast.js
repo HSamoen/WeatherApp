@@ -1,8 +1,8 @@
 const request = require('request') //load in 'request' module
 
 
-//use destructuring syntax
-const forecast= (latitude,longitude,callback) => {
+//use of destructuring syntax
+const forecast = (latitude,longitude,callback) => {
     const url ='http://api.weatherstack.com/current?access_key=ae61cd878c28a361959748a64e898d22&query=' + latitude + ',' + longitude + '&units=f'
 
     request({url, json:true }, (error, { body }) => {
@@ -18,20 +18,13 @@ const forecast= (latitude,longitude,callback) => {
 
 module.exports = forecast
 
+//comments:
 
+//created a function that returns a forecast using the weatherstack API
 
-//before destructuring syntax:
+//to create our forecast; pull object properties from json 
 
-// const forecast= (latitude,longitude,callback) => {
-//     const url ='http://api.weatherstack.com/current?access_key=ae61cd878c28a361959748a64e898d22&query=' + latitude + ',' + longitude + '&units=f'
+//function body returns an error for instances that forecast cannot be fetched 
+//examples: no internet connection or mispelled location
 
-//     request({url: url, json:true }, (error, response) => {
-//         if (error) {
-//             callback('Unable to connect to weather service!', undefined)
-//         } else if (response.body.error) {
-//             callback('Unable to find location', undefined)
-//         } else {
-//             callback(undefined, response.body.current.weather_descriptions[0]+ '. It is currently ' + response.body.current.temperature + ' degrees out. It feels like ' + response.body.current.feelslike +' degrees out.')
-//         }
-//     })
-// }
+//use of arrow functions and callback functions 
